@@ -4,11 +4,12 @@ import Welcome from "@components/Welcome";
 import FinderWindow from "@windows/Finder";
 import ResumeWindow from "@windows/Resume";
 import TerminalWindow from "@windows/terminal";
-import TextWindow from "@windows/Text";
+import TextViewer from "@windows/TextViewer";
+import ImageViewerWindow from "@windows/ImageViewer";
 
 import gsap from "gsap";
 import { Draggable } from "gsap/all";
-gsap.registerPlugin(Draggable)
+gsap.registerPlugin(Draggable);
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
       <ResumeWindow />
       <FinderWindow />
 
-      <TextWindow />
+      <TextViewer />
+      <ImageViewerWindow />
     </main>
   );
 };
