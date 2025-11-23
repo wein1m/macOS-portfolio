@@ -9,6 +9,7 @@ import ImageViewerWindow from "@windows/ImageViewer";
 
 import gsap from "gsap";
 import { Draggable } from "gsap/all";
+import ContactWindow from "@windows/Contact";
 gsap.registerPlugin(Draggable);
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       <TerminalWindow />
       <ResumeWindow />
       <FinderWindow />
+      <ContactWindow />
 
       <TextViewer />
       <ImageViewerWindow />
