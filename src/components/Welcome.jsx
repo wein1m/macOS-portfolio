@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useRef } from "react";
 
 const FONT_WEIGHTS = {
-  subtitle: { min: 100, max: 500, default: 100 },
+  subtitle: { min: 200, max: 500, default: 200 },
   title: { min: 400, max: 900, default: 400 },
 };
 
@@ -40,7 +40,10 @@ const handleTextHover = (container, type) => {
 
     letters.forEach((letter) => {
       const { left: l, width: w } = letter.getBoundingClientRect();
-      const distance = Math.abs(mouseX - (l - left + w / 2)); // the farther the mouse, the bigger the distance. (mouseX - center of the letter)
+
+      const center = l - left + w / 2;
+      const distance = Math.abs(mouseX - center); // the farther the mouse, the bigger the distance. (mouseX - center of the letter)
+
       const intensity = Math.exp(-(distance ** 2) / 18000); // the close the mouse, the bigger the intensity.
 
       animateLetter(letter, min + (max - min) * intensity);
