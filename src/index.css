@@ -105,7 +105,7 @@ body {
     @apply flex gap-2;
 
     .close {
-      @apply size-3.5 rounded-full bg-[#ff6157] cursor-pointer;
+      @apply size-3.5 rounded-full bg-[#ff6157] cursor-pointer hover:opacity-80;
     }
 
     .minimize {
@@ -354,10 +354,25 @@ body {
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
+    }
+
+    .content {
+      @apply p-6 flex flex-row items-center gap-10;
+
+      .image {
+        @apply size-48 aspect-square;
+        img {
+          @apply object-fill rounded-md;
+        }
+      }
+
+      h3 {
+        @apply text-lg font-semibold;
+      }
     }
   }
 

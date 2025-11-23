@@ -4,6 +4,7 @@ import Welcome from "@components/Welcome";
 import FinderWindow from "@windows/Finder";
 import ResumeWindow from "@windows/Resume";
 import TerminalWindow from "@windows/terminal";
+import TextWindow from "@windows/Text";
 
 import gsap from "gsap";
 import { Draggable } from "gsap/all";
@@ -19,6 +20,8 @@ const App = () => {
       <TerminalWindow />
       <ResumeWindow />
       <FinderWindow />
+
+      <TextWindow />
     </main>
   );
 };
