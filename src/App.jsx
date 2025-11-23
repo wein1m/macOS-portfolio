@@ -1,7 +1,7 @@
 import Dock from "@components/Dock";
 import Navbar from "@components/Navbar";
 import Welcome from "@components/Welcome";
-// import Terminal from "@windows/terminal";
+import ResumeWindow from "@windows/Resume";
 import TerminalWindow from "@windows/terminal";
 
 import gsap from "gsap";
@@ -16,7 +16,7 @@ const App = () => {
       <Dock />
 
       <TerminalWindow />
-      {/* <Terminal /> */}
+      <ResumeWindow />
     </main>
   );
 };
