@@ -51,27 +51,21 @@ const Dock = () => {
       );
     };
 
-    dock.addEventListener('mousemove', handleMouseMove);
-    dock.addEventListener('mouseleave', handleMouseLeave);
+    dock.addEventListener("mousemove", handleMouseMove);
+    dock.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      dock.removeEventListener('mousemove', handleMouseMove);
-      dock.removeEventListener('mouseleave', handleMouseLeave);
-    }
+      dock.removeEventListener("mousemove", handleMouseMove);
+      dock.removeEventListener("mouseleave", handleMouseLeave);
+    };
   }, []);
 
   const toggleApp = (app) => {
-    if(!app.canOpen) return;
+    if (!app.canOpen) return;
 
     const window = windows[app.id];
 
-    if (window.isOpen) {
-      closeWindow(app.id);
-    } else {
-      openWindow(app.id);
-    }
-
-    console.log(windows);
+    window.isOpen ? closeWindow(app.id) : openWindow(app.id);
   };
 
   return (
